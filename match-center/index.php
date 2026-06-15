@@ -23,7 +23,7 @@ if ($match_id > 0) {
                     <h5 class="text-muted mb-4"><?php echo e($match['tournament_name']); ?> - <?php echo e($match['venue']); ?></h5>
                     <div class="row align-items-center">
                         <div class="col-md-4">
-                            <img src="../uploads/<?php echo e($match['home_logo']); ?>" width="100" class="mb-3">
+                            <img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($match['home_logo']); ?>" width="100" class="mb-3">
                             <h3><?php echo e($match['home']); ?></h3>
                         </div>
                         <div class="col-md-4">
@@ -31,7 +31,7 @@ if ($match_id > 0) {
                             <span class="badge bg-<?php echo $match['status'] == 'live' ? 'danger' : 'secondary'; ?> fs-4"><?php echo strtoupper($match['status']); ?></span>
                         </div>
                         <div class="col-md-4">
-                            <img src="../uploads/<?php echo e($match['away_logo']); ?>" width="100" class="mb-3">
+                            <img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($match['away_logo']); ?>" width="100" class="mb-3">
                             <h3><?php echo e($match['away']); ?></h3>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ if ($match_id > 0) {
                         </div>
                         <div class="row align-items-center text-center">
                             <div class="col-4">
-                                <img src="../uploads/<?php echo e($m['home_logo']); ?>" width="40" class="mb-2">
+                                <img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($m['home_logo']); ?>" width="40" class="mb-2">
                                 <div class="fw-bold"><?php echo e($m['home']); ?></div>
                             </div>
                             <div class="col-4">
@@ -106,12 +106,12 @@ if ($match_id > 0) {
                                 <span class="badge bg-<?php echo $m['status'] == 'live' ? 'danger' : 'secondary'; ?>"><?php echo strtoupper($m['status']); ?></span>
                             </div>
                             <div class="col-4">
-                                <img src="../uploads/<?php echo e($m['away_logo']); ?>" width="40" class="mb-2">
+                                <img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($m['away_logo']); ?>" width="40" class="mb-2">
                                 <div class="fw-bold"><?php echo e($m['away']); ?></div>
                             </div>
                         </div>
                         <div class="text-center mt-3">
-                            <a href="index.php?id=<?php echo e($m['id']); ?>" class="btn btn-outline-dark btn-sm">Match Details</a>
+                            <a href="<?php echo SITE_URL; ?>/match-center/index.php?id=<?php echo e($m['id']); ?>" class="btn btn-outline-dark btn-sm">Match Details</a>
                         </div>
                     </div>
                 </div>

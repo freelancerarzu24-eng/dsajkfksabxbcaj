@@ -146,7 +146,7 @@ $teams = $db->resultSet();
                     <tbody>
                         <?php foreach($players as $p): ?>
                         <tr>
-                            <td><img src="../uploads/<?php echo e($p['photo']); ?>" width="40"></td>
+                            <td><img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($p['photo']); ?>" width="40"></td>
                             <td><?php echo e($p['name_en']); ?></td>
                             <td><?php echo $p['team_name'] ?: 'N/A'; ?></td>
                             <td>

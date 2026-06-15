@@ -1,12 +1,19 @@
 RewriteEngine On
-RewriteBase /sports-portal/
+
+# Prevent infinite loops by checking if the request is not a physical file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 
 # SEO Friendly URLs for News
 RewriteRule ^news/([^/]+)/?$ news/index.php?slug=$1 [L,QSA]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 # SEO Friendly URLs for Categories
 RewriteRule ^category/([^/]+)/?$ category/index.php?slug=$1 [L,QSA]
 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 # SEO Friendly URLs for Match Center
 RewriteRule ^match-center/([^/]+)/?$ match-center/index.php?id=$1 [L,QSA]
 

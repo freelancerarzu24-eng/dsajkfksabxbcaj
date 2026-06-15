@@ -33,8 +33,8 @@ $page_title = $article['title_' . $current_lang];
 <div class="container mt-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.php"><?php echo $texts['home']; ?></a></li>
-            <li class="breadcrumb-item"><a href="../category/index.php?slug=<?php echo e($article['cat_slug']); ?>"><?php echo e($article['cat_name']); ?></a></li>
+            <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>/index.php"><?php echo $texts['home']; ?></a></li>
+            <li class="breadcrumb-item"><a href="<?php echo SITE_URL; ?>/category/index.php?slug=<?php echo e($article['cat_slug']); ?>"><?php echo e($article['cat_name']); ?></a></li>
             <li class="breadcrumb-item active"><?php echo e($article['title_' . $current_lang]); ?></li>
         </ol>
     </nav>
@@ -48,7 +48,7 @@ $page_title = $article['title_' . $current_lang];
                 <span><i class="fas fa-eye me-1"></i> <?php echo e($article['views']); ?> Views</span>
             </div>
 
-            <img src="../uploads/<?php echo e($article['featured_image']); ?>" class="img-fluid rounded mb-4 w-100" style="max-height: 500px; object-fit: cover;">
+            <img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($article['featured_image']); ?>" class="img-fluid rounded mb-4 w-100" style="max-height: 500px; object-fit: cover;">
 
             <div class="article-content fs-5" style="line-height: 1.8;">
                 <?php echo e($article['content_' . $current_lang]); ?>
@@ -83,9 +83,9 @@ $page_title = $article['title_' . $current_lang];
             <h4 class="mb-4"><?php echo $texts['related_news']; ?></h4>
             <?php foreach($related_news as $rn): ?>
             <div class="d-flex mb-3">
-                <img src="../uploads/<?php echo e($rn['featured_image']); ?>" width="100" height="70" class="rounded me-3" style="object-fit: cover;">
+                <img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($rn['featured_image']); ?>" width="100" height="70" class="rounded me-3" style="object-fit: cover;">
                 <div>
-                    <h6 class="mb-1"><a href="index.php?slug=<?php echo e($rn['slug']); ?>" class="text-dark text-decoration-none"><?php echo e($rn['title_' . $current_lang]); ?></a></h6>
+                    <h6 class="mb-1"><a href="<?php echo SITE_URL; ?>/news/index.php?slug=<?php echo e($rn['slug']); ?>" class="text-dark text-decoration-none"><?php echo e($rn['title_' . $current_lang]); ?></a></h6>
                     <small class="text-muted"><?php echo date('M d, Y', strtotime($rn['created_at'])); ?></small>
                 </div>
             </div>

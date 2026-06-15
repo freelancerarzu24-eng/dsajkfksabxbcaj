@@ -58,7 +58,7 @@ require_once __DIR__ . '/includes/header.php';
             <tbody>
                 <?php foreach($broadcasters as $b): ?>
                 <tr>
-                    <td><img src="../uploads/<?php echo e($b['logo']); ?>" width="40"></td>
+                    <td><img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($b['logo']); ?>" width="40"></td>
                     <td><?php echo e($b['name']); ?></td>
                     <td><?php echo e($b['website']); ?></td>
                     <td><button class="btn btn-sm btn-info" onclick='editB(<?php echo json_encode($b); ?>)'>Edit</button></td>

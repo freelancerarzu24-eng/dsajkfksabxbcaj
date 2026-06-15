@@ -41,7 +41,7 @@ $page_title = $texts['where_to_watch'];
                             <?php if($g['b_name']): ?>
                             <div class="col-6 border-end">
                                 <small class="text-muted d-block mb-2">Broadcaster</small>
-                                <img src="../uploads/<?php echo $g['b_logo'] ?: 'default_b.png'; ?>" height="40" class="mb-2">
+                                <img src="<?php echo SITE_URL; ?>/uploads/<?php echo $g['b_logo'] ?: 'default_b.png'; ?>" height="40" class="mb-2">
                                 <div class="fw-bold"><?php echo e($g['b_name']); ?></div>
                             </div>
                             <?php endif; ?>
@@ -49,7 +49,7 @@ $page_title = $texts['where_to_watch'];
                             <?php if($g['o_name']): ?>
                             <div class="col-6">
                                 <small class="text-muted d-block mb-2">OTT Platform</small>
-                                <img src="../uploads/<?php echo $g['o_logo'] ?: 'default_o.png'; ?>" height="40" class="mb-2">
+                                <img src="<?php echo SITE_URL; ?>/uploads/<?php echo $g['o_logo'] ?: 'default_o.png'; ?>" height="40" class="mb-2">
                                 <div class="fw-bold"><a href="<?php echo e($g['o_url']); ?>" target="_blank" class="text-decoration-none text-dark"><?php echo e($g['o_name']); ?></a></div>
                             </div>
                             <?php endif; ?>

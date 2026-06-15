@@ -47,13 +47,17 @@ if ($step == 3 && $_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->execute([$adm_user, $adm_email, $adm_pass]);
 
         // Write Config File
+        $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
+        $current_url = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+        $site_url = str_replace('/install', '', $current_url);
+
         $config_content = "<?php
 define('DB_HOST', '$host');
 define('DB_USER', '$user');
 define('DB_PASS', '$pass');
 define('DB_NAME', '$name');
 define('SITE_NAME', 'PlayPulse Sports');
-define('SITE_URL', 'http://' . \$_SERVER['HTTP_HOST'] . '/sports-portal');
+define('SITE_URL', '$site_url');
 define('ADMIN_URL', SITE_URL . '/admin');
 define('SECRET_KEY', '" . bin2hex(random_bytes(32)) . "');
 define('DEFAULT_LANG', 'en');
@@ -114,7 +118,7 @@ date_default_timezone_set('Asia/Dhaka');
                         <h4 class="text-success">Installation Successful!</h4>
                         <p>Your website is ready.</p>
                         <p class="text-danger">Important: Please delete the <strong>install</strong> directory for security.</p>
-                        <a href="../index.php" class="btn btn-primary me-2">Go to Website</a>
+                        <a href="<?php echo SITE_URL; ?>/index.php" class="btn btn-primary me-2">Go to Website</a>
                         <a href="../admin/login.php" class="btn btn-dark">Admin Panel</a>
                     </div>
                 <?php endif; ?>

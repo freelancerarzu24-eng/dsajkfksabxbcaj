@@ -94,7 +94,7 @@ require_once __DIR__ . '/includes/header.php';
         <tbody>
             <?php foreach($articles as $art): ?>
             <tr>
-                <td><img src="../uploads/<?php echo e($art['featured_image']); ?>" width="50"></td>
+                <td><img src="<?php echo SITE_URL; ?>/uploads/<?php echo e($art['featured_image']); ?>" width="50"></td>
                 <td><?php echo e($art['title_en']); ?></td>
                 <td><?php echo e($art['cat_name']); ?></td>
                 <td><a href="?edit=<?php echo e($art['id']); ?>" class="btn btn-sm btn-info">Edit</a></td>

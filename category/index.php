@@ -41,10 +41,10 @@ $page_title = $category['name_' . $current_lang];
             <?php foreach($articles as $art): ?>
             <div class="col-md-4">
                 <div class="card h-100 news-card shadow-sm">
-                    <img src="../uploads/<?php echo $art['featured_image']; ?>" class="card-img-top news-card-img" alt="..." loading="lazy">
+                    <img src="<?php echo SITE_URL; ?>/uploads/<?php echo $art['featured_image']; ?>" class="card-img-top news-card-img" alt="..." loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a href="../news/index.php?slug=<?php echo $art['slug']; ?>" class="text-dark text-decoration-none"><?php echo e($art['title_' . $current_lang]); ?></a>
+                            <a href="<?php echo SITE_URL; ?>/news/index.php?slug=<?php echo $art['slug']; ?>" class="text-dark text-decoration-none"><?php echo e($art['title_' . $current_lang]); ?></a>
                         </h5>
                         <p class="small text-muted mb-0"><?php echo date('M d, Y', strtotime($art['created_at'])); ?></p>
                     </div>
