@@ -37,6 +37,9 @@ CREATE TABLE `admins` (
   CONSTRAINT `admins_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+INSERT INTO `admins` (`role_id`, `username`, `email`, `password`, `full_name`) VALUES
+(1, 'admin', 'admin@playpulse.com', '$2y$10$8hQhoGMPB6zlVQfxkXTu/O/QDATlmbhfDBvX4vJ1XATEpvaFwnpPu', 'Super Admin');
+
 -- --------------------------------------------------------
 
 -- Table structure for table `users`
