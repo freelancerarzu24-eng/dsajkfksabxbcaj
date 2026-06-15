@@ -59,7 +59,7 @@ validateCSRF();
                 </div>
                 <div class="card-body p-4">
                     <?php if ($error): ?>
-                        <div class="alert alert-danger"><?php echo e($error); ?> ?></div>
+                        <div class="alert alert-danger"><?php echo e($error); ?></div>
                     <?php endif; ?>
                     <form action="login.php" method="POST">
                         <?php csrf_field(); ?>

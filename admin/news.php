@@ -61,7 +61,7 @@ $page_title = "Manage News";
 $active_page = "news";
 require_once __DIR__ . '/includes/header.php';
 ?>
-<?php echo e($message); ?> ?>
+<?php echo e($message); ?>
 <?php if (isset($_GET['add']) || isset($_GET['edit'])):
     $edit_article = null;
     if (isset($_GET['edit'])) {
@@ -94,10 +94,10 @@ require_once __DIR__ . '/includes/header.php';
         <tbody>
             <?php foreach($articles as $art): ?>
             <tr>
-                <td><img src="../uploads/<?php echo e($art['featured_image']); ?> ?>" width="50"></td>
+                <td><img src="../uploads/<?php echo e($art['featured_image']); ?>" width="50"></td>
                 <td><?php echo e($art['title_en']); ?></td>
-                <td><?php echo e($art['cat_name']); ?> ?></td>
-                <td><a href="?edit=<?php echo e($art['id']); ?> ?>" class="btn btn-sm btn-info">Edit</a></td>
+                <td><?php echo e($art['cat_name']); ?></td>
+                <td><a href="?edit=<?php echo e($art['id']); ?>" class="btn btn-sm btn-info">Edit</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

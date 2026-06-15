@@ -69,9 +69,9 @@ if (isset($_GET['export'])) {
             <tbody>
                 <?php foreach($subscribers as $s): ?>
                 <tr>
-                    <td><?php echo e($s['id']); ?> ?></td>
-                    <td><?php echo e($s['email']); ?> ?></td>
-                    <td><?php echo e($s['created_at']); ?> ?></td>
+                    <td><?php echo e($s['id']); ?></td>
+                    <td><?php echo e($s['email']); ?></td>
+                    <td><?php echo e($s['created_at']); ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { validateCSRF();
     <div class="row justify-content-center">
         <div class="col-md-5">
             <div class="card shadow-sm">
-                <div class="card-header bg-warning text-dark fw-bold"><?php echo $texts['login']; ?> ?> ?></div>
+                <div class="card-header bg-warning text-dark fw-bold"><?php echo $texts['login']; ?></div>
                 <div class="card-body p-4">
                     <?php if($error) echo "<div class='alert alert-danger'>$error</div>"; ?>
                     <form method="POST"> <?php csrf_field(); ?>
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { validateCSRF();
                             <label>Password</label>
                             <input type="password" name="password" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100"><?php echo $texts['login']; ?> ?> ?></button>
+                        <button type="submit" class="btn btn-primary w-100"><?php echo $texts['login']; ?></button>
                     </form>
                     <div class="mt-3 text-center">
                         Don't have an account? <a href="register.php">Register here</a>

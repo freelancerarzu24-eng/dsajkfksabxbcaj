@@ -46,5 +46,5 @@ checkAdmin();
     <div class="main-content">
         <header class="d-flex justify-content-between align-items-center mb-4">
             <h2><?php echo $page_title ?? 'Dashboard'; ?></h2>
-            <div>Welcome, <strong><?php echo e($_SESSION['admin_username']); ?> ?></strong></div>
+            <div>Welcome, <strong><?php echo e($_SESSION['admin_username']); ?></strong></div>
         </header>

@@ -11,3 +11,15 @@
 [Mon Jun 15 10:09:16 2026] [::1]:33550 Accepted
 [Mon Jun 15 10:09:16 2026] [::1]:33550 [200]: GET /admin/login.php
 [Mon Jun 15 10:09:16 2026] [::1]:33550 Closing
+[Mon Jun 15 10:52:43 2026] [::1]:34712 Accepted
+[Mon Jun 15 10:52:43 2026] [::1]:34712 [200]: GET /index.php
+[Mon Jun 15 10:52:43 2026] [::1]:34712 Closing
+[Mon Jun 15 10:52:43 2026] [::1]:34718 Accepted
+[Mon Jun 15 10:52:43 2026] [::1]:34718 [200]: GET /admin/login.php
+[Mon Jun 15 10:52:43 2026] [::1]:34718 Closing
+[Mon Jun 15 10:56:28 2026] [::1]:42002 Accepted
+[Mon Jun 15 10:56:28 2026] [::1]:42002 [200]: GET /index.php
+[Mon Jun 15 10:56:28 2026] [::1]:42002 Closing
+[Mon Jun 15 10:56:28 2026] [::1]:42008 Accepted
+[Mon Jun 15 10:56:28 2026] [::1]:42008 [200]: GET /admin/login.php
+[Mon Jun 15 10:56:28 2026] [::1]:42008 Closing

@@ -20,9 +20,9 @@ if (isset($_GET['logout'])) {
             <div class="card p-4 text-center shadow-sm">
                 <img src="../uploads/<?php echo $user['profile_pic'] ?: 'default_user.png'; ?>" class="rounded-circle mx-auto mb-3" width="120">
                 <h4><?php echo $user['full_name'] ?: $user['username']; ?></h4>
-                <p class="text-muted"><?php echo e($user['email']); ?> ?></p>
+                <p class="text-muted"><?php echo e($user['email']); ?></p>
                 <hr>
-                <a href="?logout=1" class="btn btn-outline-danger w-100"><?php echo $texts['logout']; ?> ?> ?></a>
+                <a href="?logout=1" class="btn btn-outline-danger w-100"><?php echo $texts['logout']; ?></a>
             </div>
         </div>
         <div class="col-md-8">

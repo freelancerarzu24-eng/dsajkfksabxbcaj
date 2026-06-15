@@ -50,7 +50,7 @@ require_once __DIR__ . '/includes/header.php';
             <thead><tr><th>Logo</th><th>Name</th><th>URL</th><th>Actions</th></tr></thead>
             <tbody>
                 <?php foreach($platforms as $p): ?>
-                <tr><td><img src="../uploads/<?php echo e($p['logo']); ?> ?>" width="40"></td><td><?php echo e($p['name']); ?> ?></td><td><?php echo e($p['url']); ?> ?></td><td><button class="btn btn-sm btn-info" onclick='editO(<?php echo json_encode($p); ?>)'>Edit</button></td></tr>
+                <tr><td><img src="../uploads/<?php echo e($p['logo']); ?>" width="40"></td><td><?php echo e($p['name']); ?></td><td><?php echo e($p['url']); ?></td><td><button class="btn btn-sm btn-info" onclick='editO(<?php echo json_encode($p); ?>)'>Edit</button></td></tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

@@ -56,7 +56,7 @@ require_once __DIR__ . '/includes/header.php';
     <div class="col-md-8">
         <table class="table bg-white"><thead><tr><th>Date</th><th>Teams</th><th>Score</th><th>Status</th><th>Actions</th></tr></thead>
         <tbody><?php foreach($matches as $m): ?>
-            <tr><td><?php echo date('M d, H:i', strtotime($m['match_date'])); ?></td><td><?php echo e($m['home_team']); ?> ?> vs <?php echo e($m['away_team']); ?> ?></td><td><?php echo e($m['score_home']); ?> ?> - <?php echo e($m['score_away']); ?> ?></td><td><?php echo e($m['status']); ?> ?></td><td><button class="btn btn-sm btn-info" onclick='editMatch(<?php echo json_encode($m); ?>)'>Edit</button></td></tr>
+            <tr><td><?php echo date('M d, H:i', strtotime($m['match_date'])); ?></td><td><?php echo e($m['home_team']); ?> vs <?php echo e($m['away_team']); ?></td><td><?php echo e($m['score_home']); ?> - <?php echo e($m['score_away']); ?></td><td><?php echo e($m['status']); ?></td><td><button class="btn btn-sm btn-info" onclick='editMatch(<?php echo json_encode($m); ?>)'>Edit</button></td></tr>
         <?php endforeach; ?></tbody></table>
     </div>
 </div>

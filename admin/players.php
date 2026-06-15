@@ -90,7 +90,7 @@ $teams = $db->resultSet();
 
     <div class="main-content">
         <h3>Manage Players</h3>
-        <?php echo e($message); ?> ?>
+        <?php echo e($message); ?>
 
         <div class="row">
             <div class="col-md-4">
@@ -104,7 +104,7 @@ $teams = $db->resultSet();
                             <select name="team_id" id="player_team_id" class="form-select">
                                 <option value="0">No Team</option>
                                 <?php foreach($teams as $t): ?>
-                                    <option value="<?php echo e($t['id']); ?> ?>"><?php echo e($t['name_en']); ?> ?></option>
+                                    <option value="<?php echo e($t['id']); ?>"><?php echo e($t['name_en']); ?></option>
                                 <?php endforeach; ?>
                             </select>
                         </div>
@@ -146,12 +146,12 @@ $teams = $db->resultSet();
                     <tbody>
                         <?php foreach($players as $p): ?>
                         <tr>
-                            <td><img src="../uploads/<?php echo e($p['photo']); ?> ?>" width="40"></td>
-                            <td><?php echo e($p['name_en']); ?> ?></td>
+                            <td><img src="../uploads/<?php echo e($p['photo']); ?>" width="40"></td>
+                            <td><?php echo e($p['name_en']); ?></td>
                             <td><?php echo $p['team_name'] ?: 'N/A'; ?></td>
                             <td>
                                 <button class="btn btn-sm btn-info" onclick='editPlayer(<?php echo json_encode($p); ?>)'>Edit</button>
-                                <a href="?delete=<?php echo e($p['id']); ?> ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                                <a href="?delete=<?php echo e($p['id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

@@ -17,7 +17,7 @@ $page_title = $texts['where_to_watch'];
 
 <div class="container mt-5">
     <div class="text-center mb-5">
-        <h2 class="fw-bold"><?php echo $texts['where_to_watch']; ?> ?> ?></h2>
+        <h2 class="fw-bold"><?php echo $texts['where_to_watch']; ?></h2>
         <p class="text-muted">Official broadcasters and streaming platforms for upcoming matches.</p>
     </div>
 
@@ -32,17 +32,17 @@ $page_title = $texts['where_to_watch'];
                 <div class="card shadow-sm">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-                            <span class="badge bg-warning text-dark"><?php echo e($g['tournament_name']); ?> ?></span>
-                            <span class="fw-bold"><i class="fas fa-globe me-1"></i> <?php echo e($g['country']); ?> ?></span>
+                            <span class="badge bg-warning text-dark"><?php echo e($g['tournament_name']); ?></span>
+                            <span class="fw-bold"><i class="fas fa-globe me-1"></i> <?php echo e($g['country']); ?></span>
                         </div>
-                        <h5 class="mb-4"><?php echo e($g['home']); ?> ?> vs <?php echo e($g['away']); ?> ?></h5>
+                        <h5 class="mb-4"><?php echo e($g['home']); ?> vs <?php echo e($g['away']); ?></h5>
 
                         <div class="row text-center">
                             <?php if($g['b_name']): ?>
                             <div class="col-6 border-end">
                                 <small class="text-muted d-block mb-2">Broadcaster</small>
                                 <img src="../uploads/<?php echo $g['b_logo'] ?: 'default_b.png'; ?>" height="40" class="mb-2">
-                                <div class="fw-bold"><?php echo e($g['b_name']); ?> ?></div>
+                                <div class="fw-bold"><?php echo e($g['b_name']); ?></div>
                             </div>
                             <?php endif; ?>
 
@@ -50,7 +50,7 @@ $page_title = $texts['where_to_watch'];
                             <div class="col-6">
                                 <small class="text-muted d-block mb-2">OTT Platform</small>
                                 <img src="../uploads/<?php echo $g['o_logo'] ?: 'default_o.png'; ?>" height="40" class="mb-2">
-                                <div class="fw-bold"><a href="<?php echo e($g['o_url']); ?> ?>" target="_blank" class="text-decoration-none text-dark"><?php echo e($g['o_name']); ?> ?></a></div>
+                                <div class="fw-bold"><a href="<?php echo e($g['o_url']); ?>" target="_blank" class="text-decoration-none text-dark"><?php echo e($g['o_name']); ?></a></div>
                             </div>
                             <?php endif; ?>
                         </div>

@@ -20,19 +20,19 @@ if ($match_id > 0) {
         <div class="container mt-5">
             <div class="card shadow-lg mb-4">
                 <div class="card-body text-center p-5">
-                    <h5 class="text-muted mb-4"><?php echo e($match['tournament_name']); ?> ?> - <?php echo e($match['venue']); ?> ?></h5>
+                    <h5 class="text-muted mb-4"><?php echo e($match['tournament_name']); ?> - <?php echo e($match['venue']); ?></h5>
                     <div class="row align-items-center">
                         <div class="col-md-4">
-                            <img src="../uploads/<?php echo e($match['home_logo']); ?> ?>" width="100" class="mb-3">
-                            <h3><?php echo e($match['home']); ?> ?></h3>
+                            <img src="../uploads/<?php echo e($match['home_logo']); ?>" width="100" class="mb-3">
+                            <h3><?php echo e($match['home']); ?></h3>
                         </div>
                         <div class="col-md-4">
-                            <h1 class="display-1 fw-bold"><?php echo e($match['score_home']); ?> ?> : <?php echo e($match['score_away']); ?> ?></h1>
+                            <h1 class="display-1 fw-bold"><?php echo e($match['score_home']); ?> : <?php echo e($match['score_away']); ?></h1>
                             <span class="badge bg-<?php echo $match['status'] == 'live' ? 'danger' : 'secondary'; ?> fs-4"><?php echo strtoupper($match['status']); ?></span>
                         </div>
                         <div class="col-md-4">
-                            <img src="../uploads/<?php echo e($match['away_logo']); ?> ?>" width="100" class="mb-3">
-                            <h3><?php echo e($match['away']); ?> ?></h3>
+                            <img src="../uploads/<?php echo e($match['away_logo']); ?>" width="100" class="mb-3">
+                            <h3><?php echo e($match['away']); ?></h3>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ if ($match_id > 0) {
                     <div class="card p-4">
                         <h4>Match Details</h4>
                         <hr>
-                        <p><?php echo e($match['match_details']); ?> ?></p>
+                        <p><?php echo e($match['match_details']); ?></p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -86,32 +86,32 @@ if ($match_id > 0) {
     $all_matches = $db->resultSet();
     ?>
     <div class="container mt-5">
-        <h2 class="fw-bold mb-4"><?php echo $texts['match_center']; ?> ?> ?></h2>
+        <h2 class="fw-bold mb-4"><?php echo $texts['match_center']; ?></h2>
         <div class="row">
             <?php foreach($all_matches as $m): ?>
             <div class="col-md-6 mb-4">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <div class="d-flex justify-content-between small text-muted mb-3">
-                            <span><?php echo e($m['tournament_name']); ?> ?></span>
+                            <span><?php echo e($m['tournament_name']); ?></span>
                             <span><?php echo date('M d, Y H:i', strtotime($m['match_date'])); ?></span>
                         </div>
                         <div class="row align-items-center text-center">
                             <div class="col-4">
-                                <img src="../uploads/<?php echo e($m['home_logo']); ?> ?>" width="40" class="mb-2">
-                                <div class="fw-bold"><?php echo e($m['home']); ?> ?></div>
+                                <img src="../uploads/<?php echo e($m['home_logo']); ?>" width="40" class="mb-2">
+                                <div class="fw-bold"><?php echo e($m['home']); ?></div>
                             </div>
                             <div class="col-4">
-                                <h5><?php echo e($m['score_home']); ?> ?> : <?php echo e($m['score_away']); ?> ?></h5>
+                                <h5><?php echo e($m['score_home']); ?> : <?php echo e($m['score_away']); ?></h5>
                                 <span class="badge bg-<?php echo $m['status'] == 'live' ? 'danger' : 'secondary'; ?>"><?php echo strtoupper($m['status']); ?></span>
                             </div>
                             <div class="col-4">
-                                <img src="../uploads/<?php echo e($m['away_logo']); ?> ?>" width="40" class="mb-2">
-                                <div class="fw-bold"><?php echo e($m['away']); ?> ?></div>
+                                <img src="../uploads/<?php echo e($m['away_logo']); ?>" width="40" class="mb-2">
+                                <div class="fw-bold"><?php echo e($m['away']); ?></div>
                             </div>
                         </div>
                         <div class="text-center mt-3">
-                            <a href="index.php?id=<?php echo e($m['id']); ?> ?>" class="btn btn-outline-dark btn-sm">Match Details</a>
+                            <a href="index.php?id=<?php echo e($m['id']); ?>" class="btn btn-outline-dark btn-sm">Match Details</a>
                         </div>
                     </div>
                 </div>

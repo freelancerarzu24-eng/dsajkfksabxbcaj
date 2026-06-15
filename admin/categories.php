@@ -42,7 +42,7 @@ $page_title = "Manage Categories";
 $active_page = "categories";
 require_once __DIR__ . '/includes/header.php';
 ?>
-<?php echo e($message); ?> ?>
+<?php echo e($message); ?>
 <div class="row">
     <div class="col-md-4">
         <div class="card p-3">
@@ -60,7 +60,7 @@ require_once __DIR__ . '/includes/header.php';
             <thead><tr><th>ID</th><th>Name (EN)</th><th>Name (BN)</th><th>Actions</th></tr></thead>
             <tbody>
                 <?php foreach($categories as $cat): ?>
-                <tr><td><?php echo e($cat['id']); ?> ?></td><td><?php echo e($cat['name_en']); ?></td><td><?php echo e($cat['name_bn']); ?></td><td><button class="btn btn-sm btn-info" onclick='editCat(<?php echo json_encode($cat); ?>)'>Edit</button></td></tr>
+                <tr><td><?php echo e($cat['id']); ?></td><td><?php echo e($cat['name_en']); ?></td><td><?php echo e($cat['name_bn']); ?></td><td><button class="btn btn-sm btn-info" onclick='editCat(<?php echo json_encode($cat); ?>)'>Edit</button></td></tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

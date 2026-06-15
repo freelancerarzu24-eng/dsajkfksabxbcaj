@@ -33,25 +33,25 @@ $page_title = $article['title_' . $current_lang];
 <div class="container mt-5">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../index.php"><?php echo $texts['home']; ?> ?> ?></a></li>
-            <li class="breadcrumb-item"><a href="../category/index.php?slug=<?php echo e($article['cat_slug']); ?> ?>"><?php echo e($article['cat_name']); ?> ?></a></li>
-            <li class="breadcrumb-item active"><?php echo e($article['title_' . $current_lang]); ?> ?></li>
+            <li class="breadcrumb-item"><a href="../index.php"><?php echo $texts['home']; ?></a></li>
+            <li class="breadcrumb-item"><a href="../category/index.php?slug=<?php echo e($article['cat_slug']); ?>"><?php echo e($article['cat_name']); ?></a></li>
+            <li class="breadcrumb-item active"><?php echo e($article['title_' . $current_lang]); ?></li>
         </ol>
     </nav>
 
     <div class="row">
         <div class="col-lg-8">
-            <h1 class="fw-bold mb-3"><?php echo e($article['title_' . $current_lang]); ?> ?></h1>
+            <h1 class="fw-bold mb-3"><?php echo e($article['title_' . $current_lang]); ?></h1>
             <div class="d-flex align-items-center mb-4 text-muted small">
-                <span class="me-3"><i class="fas fa-user me-1"></i> <?php echo e($article['author']); ?> ?></span>
+                <span class="me-3"><i class="fas fa-user me-1"></i> <?php echo e($article['author']); ?></span>
                 <span class="me-3"><i class="fas fa-calendar-alt me-1"></i> <?php echo date('M d, Y', strtotime($article['created_at'])); ?></span>
-                <span><i class="fas fa-eye me-1"></i> <?php echo e($article['views']); ?> ?> Views</span>
+                <span><i class="fas fa-eye me-1"></i> <?php echo e($article['views']); ?> Views</span>
             </div>
 
-            <img src="../uploads/<?php echo e($article['featured_image']); ?> ?>" class="img-fluid rounded mb-4 w-100" style="max-height: 500px; object-fit: cover;">
+            <img src="../uploads/<?php echo e($article['featured_image']); ?>" class="img-fluid rounded mb-4 w-100" style="max-height: 500px; object-fit: cover;">
 
             <div class="article-content fs-5" style="line-height: 1.8;">
-                <?php echo e($article['content_' . $current_lang]); ?> ?>
+                <?php echo e($article['content_' . $current_lang]); ?>
             </div>
 
             <!-- Social Share -->
@@ -65,14 +65,14 @@ $page_title = $article['title_' . $current_lang];
 
             <!-- Comments Section -->
             <div class="mt-5">
-                <h4><?php echo $texts['comments']; ?> ?> ?></h4>
+                <h4><?php echo $texts['comments']; ?></h4>
                 <div class="card p-3 mb-4">
                     <form action="../includes/post_comment.php" method="POST"> <?php csrf_field(); ?>
-                        <input type="hidden" name="article_id" value="<?php echo e($article['id']); ?> ?>">
+                        <input type="hidden" name="article_id" value="<?php echo e($article['id']); ?>">
                         <div class="mb-3">
                             <textarea name="comment" class="form-control" rows="3" placeholder="Write a comment..." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-warning"><?php echo $texts['post_comment']; ?> ?> ?></button>
+                        <button type="submit" class="btn btn-warning"><?php echo $texts['post_comment']; ?></button>
                     </form>
                 </div>
             </div>
@@ -80,12 +80,12 @@ $page_title = $article['title_' . $current_lang];
 
         <div class="col-lg-4">
             <!-- Related News Sidebar -->
-            <h4 class="mb-4"><?php echo $texts['related_news']; ?> ?> ?></h4>
+            <h4 class="mb-4"><?php echo $texts['related_news']; ?></h4>
             <?php foreach($related_news as $rn): ?>
             <div class="d-flex mb-3">
-                <img src="../uploads/<?php echo e($rn['featured_image']); ?> ?>" width="100" height="70" class="rounded me-3" style="object-fit: cover;">
+                <img src="../uploads/<?php echo e($rn['featured_image']); ?>" width="100" height="70" class="rounded me-3" style="object-fit: cover;">
                 <div>
-                    <h6 class="mb-1"><a href="index.php?slug=<?php echo e($rn['slug']); ?> ?>" class="text-dark text-decoration-none"><?php echo e($rn['title_' . $current_lang]); ?> ?></a></h6>
+                    <h6 class="mb-1"><a href="index.php?slug=<?php echo e($rn['slug']); ?>" class="text-dark text-decoration-none"><?php echo e($rn['title_' . $current_lang]); ?></a></h6>
                     <small class="text-muted"><?php echo date('M d, Y', strtotime($rn['created_at'])); ?></small>
                 </div>
             </div>

@@ -70,15 +70,15 @@ $comments = $db->resultSet();
             <tbody>
                 <?php foreach($comments as $c): ?>
                 <tr>
-                    <td><?php echo e($c['article_title']); ?> ?></td>
-                    <td><?php echo e($c['name']); ?> ?></td>
-                    <td><?php echo e($c['comment']); ?> ?></td>
+                    <td><?php echo e($c['article_title']); ?></td>
+                    <td><?php echo e($c['name']); ?></td>
+                    <td><?php echo e($c['comment']); ?></td>
                     <td><span class="badge bg-<?php echo $c['status'] == 'approved' ? 'success' : 'warning'; ?>"><?php echo ucfirst($c['status']); ?></span></td>
                     <td>
                         <?php if($c['status'] == 'pending'): ?>
-                            <a href="?approve=<?php echo e($c['id']); ?> ?>" class="btn btn-sm btn-success">Approve</a>
+                            <a href="?approve=<?php echo e($c['id']); ?>" class="btn btn-sm btn-success">Approve</a>
                         <?php endif; ?>
-                        <a href="?delete=<?php echo e($c['id']); ?> ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
+                        <a href="?delete=<?php echo e($c['id']); ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure?')">Delete</a>
                     </td>
                 </tr>
                 <?php endforeach; ?>

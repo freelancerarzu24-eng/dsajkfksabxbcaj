@@ -80,7 +80,7 @@ $ads = $db->resultSet();
 
     <div class="main-content">
         <h3>Manage Advertisements</h3>
-        <?php echo e($message); ?> ?>
+        <?php echo e($message); ?>
 
         <div class="row">
             <div class="col-md-4">
@@ -139,7 +139,7 @@ $ads = $db->resultSet();
                             <td><?php echo ucfirst($ad['ad_type']); ?></td>
                             <td><?php echo $ad['status'] ? 'Active' : 'Inactive'; ?></td>
                             <td>
-                                <a href="?delete=<?php echo e($ad['id']); ?> ?>" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="?delete=<?php echo e($ad['id']); ?>" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

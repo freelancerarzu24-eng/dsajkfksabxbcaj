@@ -12,34 +12,34 @@
                     </div>
                 </div>
                 <div class="col-md-2 mb-4">
-                    <h5 class="mb-3"><?php echo $texts['sports']; ?> ?> ?></h5>
+                    <h5 class="mb-3"><?php echo $texts['sports']; ?></h5>
                     <ul class="list-unstyled">
                         <?php foreach(array_slice($nav_categories, 0, 5) as $f_cat): ?>
-                            <li><a href="<?php echo SITE_URL; ?>/category/index.php?slug=<?php echo e($f_cat['slug']); ?> ?>" class="text-secondary text-decoration-none"><?php echo e($f_cat['name_' . $current_lang]); ?> ?></a></li>
+                            <li><a href="<?php echo SITE_URL; ?>/category/index.php?slug=<?php echo e($f_cat['slug']); ?>" class="text-secondary text-decoration-none"><?php echo e($f_cat['name_' . $current_lang]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
                 <div class="col-md-2 mb-4">
                     <h5 class="mb-3">Quick Links</h5>
                     <ul class="list-unstyled text-secondary">
-                        <li><a href="<?php echo SITE_URL; ?>/match-center/index.php" class="text-secondary text-decoration-none"><?php echo $texts['live_scores']; ?> ?> ?></a></li>
-                        <li><a href="<?php echo SITE_URL; ?>/where-to-watch/index.php" class="text-secondary text-decoration-none"><?php echo $texts['streaming']; ?> ?> ?></a></li>
+                        <li><a href="<?php echo SITE_URL; ?>/match-center/index.php" class="text-secondary text-decoration-none"><?php echo $texts['live_scores']; ?></a></li>
+                        <li><a href="<?php echo SITE_URL; ?>/where-to-watch/index.php" class="text-secondary text-decoration-none"><?php echo $texts['streaming']; ?></a></li>
                         <li><a href="#" class="text-secondary text-decoration-none">Terms of Use</a></li>
                         <li><a href="#" class="text-secondary text-decoration-none">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <h5 class="mb-3"><?php echo $texts['newsletter']; ?> ?> ?></h5>
+                    <h5 class="mb-3"><?php echo $texts['newsletter']; ?></h5>
                     <p class="text-secondary">Subscribe to our newsletter for latest updates.</p>
                     <form action="<?php echo SITE_URL; ?>/includes/subscribe.php" method="POST" class="input-group"> <?php csrf_field(); ?>
                         <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                        <button type="submit" class="btn btn-warning"><?php echo $texts['subscribe']; ?> ?> ?></button>
+                        <button type="submit" class="btn btn-warning"><?php echo $texts['subscribe']; ?></button>
                     </form>
                 </div>
             </div>
             <hr class="bg-secondary">
             <div class="text-center text-secondary">
-                <p>&copy; <?php echo date('Y'); ?> <?php echo SITE_NAME; ?>. <?php echo $texts['all_rights_reserved']; ?> ?> ?></p>
+                <p>&copy; <?php echo date('Y'); ?> <?php echo SITE_NAME; ?>. <?php echo $texts['all_rights_reserved']; ?></p>
             </div>
         </div>
     </footer>
