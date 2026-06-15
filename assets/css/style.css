@@ -1,0 +1,56 @@
+:root {
+    --primary-color: #1a237e;
+    --accent-color: #ffc107;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.bg-dark {
+    background-color: #1a1a1a !important;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.hero-slider {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.badge-live {
+    animation: blinker 1.5s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.news-card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.footer {
+    background-color: #111;
+}
+
+.breaking-ticker {
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
